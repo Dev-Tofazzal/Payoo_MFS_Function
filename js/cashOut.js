@@ -14,15 +14,17 @@ document.getElementById("cash_out_btn")
                 alert("You do not have enough money to cash out")
                 return;
             }
-            
+
             const newBalance = mainBalance - cashOut;
             document.getElementById("main_balance").innerText = newBalance;
 
             const div = document.createElement("div")
             div.classList.add("bg-yellow-300")
             div.innerHTML= ` 
+                <div class="m-2 p-2">
                 <h4 class="text-2xl font-bold">Cash Out</h4>
                 <p>${cashOut} Money withdraw. New Balance ${newBalance}</p>
+                </div>
             `
 
             console.log(div);
