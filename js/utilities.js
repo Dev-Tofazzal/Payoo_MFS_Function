@@ -10,3 +10,11 @@ function getTextFieldValueById(id){
     const textNumber = parseFloat(textValue);
     return textNumber;
 }
+
+function showSectionById(id){
+    document.getElementById("cashIn").classList.add("hidden");
+    document.getElementById("cash_out").classList.add("hidden");
+    document.getElementById("transaction_history").classList.add("hidden")
+
+    document.getElementById(id).classList.remove("hidden")
+}

@@ -26,13 +26,14 @@
 
                     <div class="divider"></div>
                     <div>
-                        <button class="btn">Add Money</button>
-                        <button class="btn">Cash Out</button>
+                        <button id="show_addMoney" class="btn">Add Money</button>
+                        <button id="show_cashOut" class="btn">Cash Out</button>
+                        <button id="transaction_section" class="btn">Transaction</button>
                     </div>
                     
                     <div class="divider"></div>
                     <!-- Add money -->
-                    <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="cashIn" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                           <div class="form-control">
                             <label class="label">
@@ -54,7 +55,7 @@
                       </div>
 
                     <!-- Cash Out money -->
-                      <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <div id="cash_out" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                           <div class="form-control">
                             <label class="label">
@@ -73,14 +74,22 @@
                           </div>
                         </form>
                       </div>
-
-
+                      <!-- transaction part start here -->
+                    
+                        <div id="transaction_history" class="hidden ">
+                            <h1 class="text-4xl text-center ">This is transaction History</h1>
+                            <div id="transaction_container">
+    
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
         </div>
         <script src="js/addMoney.js"></script>
         <script src="js/utilities.js"></script>
         <script src="js/cashOut.js"></script>
+        <script src="js/feature.js"></script>
     </main>
     
 </body>
