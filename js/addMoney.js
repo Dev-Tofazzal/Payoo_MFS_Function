@@ -4,7 +4,17 @@ document.getElementById("add_money_btn")
         
         const addMoney = getInputFieldValueById("input_amount")
         const pinNumber = getInputFieldValueById("input_pin_number")
-        console.log("input value and pin",addMoney,pinNumber);
+        
+        if(pinNumber === 1234){
+            const mainBalance = getTextFieldValueById("main_balance");
+            const newBalance = mainBalance + addMoney;
+            document.getElementById("main_balance").innerText = newBalance;
+            
+            
+        }
+        else{
+            alert("failed to add money")
+        }
         
         
     })
